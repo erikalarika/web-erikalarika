@@ -1,133 +1,251 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erika Larika | Condesa Lucienne — Cabaret Místico & Tarot</title>
-  <meta name="description" content="La Gran Anfitriona de la Noche Atemporal: Alta Canción Española, Seducción Vintage & Revelación Arquetípica.">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erika Larika | Condesa Lucienne</title>
+    <!-- Fuentes Cinematográficas Retro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-terciopelo: radial-gradient(circle at center, #58111A 0%, #2D080D 70%, #1A0306 100%);
+            --seda-champan: linear-gradient(135deg, #F9E8D2 0%, #E2C39B 50%, #CFA168 100%);
+            --seda-champan-soft: rgba(249, 232, 210, 0.95);
+            --cobre-dorado: linear-gradient(135deg, #E6A15C 0%, #C57B36 50%, #8C4E1A 100%);
+            --vino-profundo: #3D0A11;
+            --texto-crema: #FAF3E0;
+            --sombre-seda: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(230, 161, 92, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-terciopelo);
+            color: var(--texto-crema);
+            font-family: 'Cormorant Garamond', serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 1rem;
+            overflow-x: hidden;
+        }
+
+        /* Encabezado Principal */
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .titulo-principal {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            background: var(--seda-champan);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitulo-elegante {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #E2C39B;
+            letter-spacing: 2px;
+            margin-top: 0.5rem;
+        }
+
+        /* Contenedor de los Dos Universos */
+        .portal-universos {
+            display: flex;
+            flex-direction: row;
+            gap: 2.5rem;
+            max-width: 1100px;
+            width: 100%;
+            justify-content: center;
+            align-items: stretch;
+            margin: auto 0;
+        }
+
+        /* Tarjeta Estilo Terciopelo y Seda */
+        .puerta-card {
+            flex: 1;
+            background: linear-gradient(145deg, rgba(61, 10, 17, 0.85), rgba(26, 3, 6, 0.95));
+            border: 1px solid rgba(230, 161, 92, 0.4);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--sombre-seda);
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efecto de Brillo Satén al Pasar el Ratón */
+        .puerta-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(249, 232, 210, 0.1) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .puerta-card:hover::before {
+            opacity: 1;
+        }
+
+        .puerta-card:hover {
+            transform: translateY(-8px);
+            border-color: #E6A15C;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(226, 195, 155, 0.3);
+        }
+
+        /* Marco de Foto Retro */
+        .imagen-marco {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            padding: 6px;
+            background: var(--cobre-dorado);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            margin-bottom: 1.5rem;
+        }
+
+        .imagen-marco img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: sepia(20%) contrast(105%);
+        }
+
+        .titulo-card {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FAF3E0;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .descripcion-card {
+            font-size: 1.15rem;
+            color: #D2B48C;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        /* Botón Estilo Seda Champán */
+        .btn-seda {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--vino-profundo);
+            background: var(--seda-champan);
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .btn-seda:hover {
+            background: #FAF3E0;
+            color: #1A0306;
+            box-shadow: 0 8px 25px rgba(249, 232, 210, 0.5);
+            transform: scale(1.03);
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(226, 195, 155, 0.6);
+            letter-spacing: 1px;
+        }
+
+        /* Adaptación a Teléfonos Móviles */
+        @media (max-width: 820px) {
+            .portal-universos {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .titulo-principal {
+                font-size: 2.1rem;
+            }
+
+            .puerta-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- HEADER / NAVEGACIÓN -->
-  <header class="navbar">
-    <div class="logo">ERIKA LARIKA</div>
-    <nav>
-      <a href="#condesa">Condesa Lucienne</a>
-      <a href="#espectaculos">Espectáculos</a>
-      <a href="#extras">Extras VIP</a>
-      <a href="#tarot">Tarot & Misterio</a>
-      <a href="#contacto" class="btn-gold-nav">Reservas VIP</a>
-    </nav>
-  </header>
+    <header>
+        <h1 class="titulo-principal">Erika Larika</h1>
+        <p class="subtitulo-elegante">Dos Universos · Una Misma Esencia</p>
+    </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="subtitle">LA GRAN ANFITRIONA DE LA NOCHE ATEMPORAL</p>
-      <h1>CONDESA LUCIENNE</h1>
-      <p class="tagline">Alta Canción Española · Seducción Vintage · Revelación Arquetípica</p>
-      <div class="hero-buttons">
-        <a href="#espectaculos" class="btn-primary">Ver Espectáculos</a>
-        <a href="#tarot" class="btn-secondary">Consultoría de Tarot</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BIOGRAFÍA & CONCEPTO -->
-  <section id="condesa" class="section bio-section">
-    <div class="container">
-      <blockquote class="quote">
-        «Hay veladas que simplemente se recuerdan... y otras que quedan grabadas en el inconsciente para siempre.»
-      </blockquote>
-      <h2>LUJO, MISTERIO Y SOFISTICACIÓN</h2>
-      <p class="bio-text">
-        Suspendida en la estética magnética y decadente de los <strong>años 50</strong>, la <strong>Condesa Lucienne</strong> es la encarnación perfecta del lujo retro, la alta teatralidad y el poder de lo místico. 
-      </p>
-      <p class="bio-text">
-        Bajo la interpretación de <strong>Erika Larika</strong>, la Condesa no se limita a subir a un escenario: toma el control absoluto de la velada como la Gran Anfitriona de la Noche. Una experiencia inmersiva concebida en exclusiva para audiencias sibaritas, salones de alta gama y galas VIP.
-      </p>
-    </div>
-  </section>
-
-  <!-- COLECCIONES ESCÉNICAS -->
-  <section id="espectaculos" class="section">
-    <div class="container">
-      <h2 class="section-title">COLECCIONES ESCÉNICAS</h2>
-      <p class="section-subtitle">Formatos adaptados a la magnitud de su evento</p>
-
-      <div class="cards-grid">
-        <!-- Formato 1 -->
-        <div class="card">
-          <span class="card-tag">Formato 1</span>
-          <h3>CÁPSULA SICALÍPTICA & BOLERO</h3>
-          <p class="card-duration">15 – 20 minutos</p>
-          <p>Píldora concentrada de glamour vintage, recital vocal en vivo de divas españolas y seducción escénica burlesque.</p>
-          <span class="card-ideal">Ideal para: Aperturas de gala, entregas de premios y cenas selectas.</span>
-        </div>
-
-        <!-- Formato 2 -->
-        <div class="card card-featured">
-          <span class="card-tag">Formato 2</span>
-          <h3>BOLERO, CORSÉ & ORÁCULO</h3>
-          <p class="card-duration">30 – 40 minutos</p>
-          <p>Conducción escénica, repertorio vocal de divas, burlesque de alta costura e intervención de Tarot Arquetípico en directo (22 Arcanos Mayores).</p>
-          <span class="card-ideal">Ideal para: Fiestas privadas VIP y cenas-espectáculo.</span>
-        </div>
-
-        <!-- Formato 3 -->
-        <div class="card">
-          <span class="card-tag">Formato 3</span>
-          <h3>CABARET MÍSTICO: GALA ARISTOCRÁTICA</h3>
-          <p class="card-duration">60 – 75 minutos</p>
-          <p>La experiencia inmersiva total. Maestría de ceremonias completa, repertorio amplio, interacción, sátira aristocrática y despliegue místico.</p>
-          <span class="card-ideal">Ideal para: Galas corporativas y eventos de gran gala.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- UNIVERSO TAROT -->
-  <section id="tarot" class="section tarot-section">
-    <div class="container">
-      <h2 class="section-title">TAROT & MISTERIO</h2>
-      <p class="section-subtitle">Consultoría Intuitiva, Evolutiva & Orientación Estratégica</p>
-      
-      <div class="tarot-content">
-        <p>
-          El Tarot de la Condesa Lucienne no es entretenimiento banal ni truco de feria. Es una <strong>herramienta de orientación, proyección y asesoramiento que parte desde el presente a través del espejo intuitivo del inconsciente</strong>.
-        </p>
+    <main class="portal-universos">
         
-        <div class="modalities">
-          <div class="modality-box">
-            <h4>📍 Presencial</h4>
-            <p>Atención exclusiva y privada en <strong>Asunción, Paraguay</strong>.</p>
-          </div>
-          <div class="modality-box">
-            <h4>🌐 Online</h4>
-            <p>Sesiones globales por Videollamada / WhatsApp (60 minutos).</p>
-          </div>
-        </div>
+        <!-- UNIVERSO 1: CONDESA LUCIENNE -->
+        <article class="puerta-card">
+            <div class="imagen-marco">
+                <img src="condesa.jpg" alt="Condesa Lucienne - Cabaret Místico" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80'">
+            </div>
+            <h2 class="titulo-card">Condesa Lucienne</h2>
+            <p class="descripcion-card">Espectáculos, Gala & Cabaret Místico.<br>Glamour retro, boleros, burlesque y la magia del escenario vintage.</p>
+            <a href="#" class="btn-seda">Entrar al Show</a>
+        </article>
 
-        <a href="https://wa.me/34622898787?text=Hola%20Erika,%20deseo%20consultar%20disponibilidad%20y%20tarifas%20para%20una%20sesión%20de%20Tarot" target="_blank" class="btn-primary btn-whatsapp">
-          Consultar Disponibilidad y Tarifas por WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
+        <!-- UNIVERSO 2: ERIKA LARIKA (TAROT) -->
+        <article class="puerta-card">
+            <div class="imagen-marco">
+                <img src="tarot.jpg" alt="Erika Larika - Tarot Evolutivo" onerror="this.src='https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=500&q=80'">
+            </div>
+            <h2 class="titulo-card">Tarot Evolutivo</h2>
+            <p class="descripcion-card">Consultoría Intuitiva & Guía Estratégica.<br>Un espacio de claridad arquetípica, introspección y transformación personal.</p>
+            <a href="#" class="btn-seda">Reservar Lectura</a>
+        </article>
 
-  <!-- FOOTER / CONTACTO -->
-  <footer id="contacto" class="footer">
-    <div class="container">
-      <h3>RESERVAS & CONTRATACIÓN VIP</h3>
-      <p>Asunción, Paraguay · Cobertura Internacional</p>
-      <p>Email: <a href="mailto:info@erikalarika.com">info@erikalarika.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/34622898787">+34 622 89 87 87</a></p>
-      <p class="copyright">© 2026 Erika Larika / Condesa Lucienne. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Erika Larika. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
