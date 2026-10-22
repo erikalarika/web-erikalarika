@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erika Larika | Condesa Lucienne — Cabaret Místico & Tarot</title>
+  <meta name="description" content="La Gran Anfitriona de la Noche Atemporal: Alta Canción Española, Seducción Vintage & Revelación Arquetípica.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <!-- HEADER / NAVEGACIÓN -->
+  <header class="navbar">
+    <div class="logo">ERIKA LARIKA</div>
+    <nav>
+      <a href="#condesa">Condesa Lucienne</a>
+      <a href="#espectaculos">Espectáculos</a>
+      <a href="#extras">Extras VIP</a>
+      <a href="#tarot">Tarot & Misterio</a>
+      <a href="#contacto" class="btn-gold-nav">Reservas VIP</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="subtitle">LA GRAN ANFITRIONA DE LA NOCHE ATEMPORAL</p>
+      <h1>CONDESA LUCIENNE</h1>
+      <p class="tagline">Alta Canción Española · Seducción Vintage · Revelación Arquetípica</p>
+      <div class="hero-buttons">
+        <a href="#espectaculos" class="btn-primary">Ver Espectáculos</a>
+        <a href="#tarot" class="btn-secondary">Consultoría de Tarot</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIOGRAFÍA & CONCEPTO -->
+  <section id="condesa" class="section bio-section">
+    <div class="container">
+      <blockquote class="quote">
+        «Hay veladas que simplemente se recuerdan... y otras que quedan grabadas en el inconsciente para siempre.»
+      </blockquote>
+      <h2>LUJO, MISTERIO Y SOFISTICACIÓN</h2>
+      <p class="bio-text">
+        Suspendida en la estética magnética y decadente de los <strong>años 50</strong>, la <strong>Condesa Lucienne</strong> es la encarnación perfecta del lujo retro, la alta teatralidad y el poder de lo místico. 
+      </p>
+      <p class="bio-text">
+        Bajo la interpretación de <strong>Erika Larika</strong>, la Condesa no se limita a subir a un escenario: toma el control absoluto de la velada como la Gran Anfitriona de la Noche. Una experiencia inmersiva concebida en exclusiva para audiencias sibaritas, salones de alta gama y galas VIP.
+      </p>
+    </div>
+  </section>
+
+  <!-- COLECCIONES ESCÉNICAS -->
+  <section id="espectaculos" class="section">
+    <div class="container">
+      <h2 class="section-title">COLECCIONES ESCÉNICAS</h2>
+      <p class="section-subtitle">Formatos adaptados a la magnitud de su evento</p>
+
+      <div class="cards-grid">
+        <!-- Formato 1 -->
+        <div class="card">
+          <span class="card-tag">Formato 1</span>
+          <h3>CÁPSULA SICALÍPTICA & BOLERO</h3>
+          <p class="card-duration">15 – 20 minutos</p>
+          <p>Píldora concentrada de glamour vintage, recital vocal en vivo de divas españolas y seducción escénica burlesque.</p>
+          <span class="card-ideal">Ideal para: Aperturas de gala, entregas de premios y cenas selectas.</span>
+        </div>
+
+        <!-- Formato 2 -->
+        <div class="card card-featured">
+          <span class="card-tag">Formato 2</span>
+          <h3>BOLERO, CORSÉ & ORÁCULO</h3>
+          <p class="card-duration">30 – 40 minutos</p>
+          <p>Conducción escénica, repertorio vocal de divas, burlesque de alta costura e intervención de Tarot Arquetípico en directo (22 Arcanos Mayores).</p>
+          <span class="card-ideal">Ideal para: Fiestas privadas VIP y cenas-espectáculo.</span>
+        </div>
+
+        <!-- Formato 3 -->
+        <div class="card">
+          <span class="card-tag">Formato 3</span>
+          <h3>CABARET MÍSTICO: GALA ARISTOCRÁTICA</h3>
+          <p class="card-duration">60 – 75 minutos</p>
+          <p>La experiencia inmersiva total. Maestría de ceremonias completa, repertorio amplio, interacción, sátira aristocrática y despliegue místico.</p>
+          <span class="card-ideal">Ideal para: Galas corporativas y eventos de gran gala.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNIVERSO TAROT -->
+  <section id="tarot" class="section tarot-section">
+    <div class="container">
+      <h2 class="section-title">TAROT & MISTERIO</h2>
+      <p class="section-subtitle">Consultoría Intuitiva, Evolutiva & Orientación Estratégica</p>
+      
+      <div class="tarot-content">
+        <p>
+          El Tarot de la Condesa Lucienne no es entretenimiento banal ni truco de feria. Es una <strong>herramienta de orientación, proyección y asesoramiento que parte desde el presente a través del espejo intuitivo del inconsciente</strong>.
+        </p>
+        
+        <div class="modalities">
+          <div class="modality-box">
+            <h4>📍 Presencial</h4>
+            <p>Atención exclusiva y privada en <strong>Asunción, Paraguay</strong>.</p>
+          </div>
+          <div class="modality-box">
+            <h4>🌐 Online</h4>
+            <p>Sesiones globales por Videollamada / WhatsApp (60 minutos).</p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/34622898787?text=Hola%20Erika,%20deseo%20consultar%20disponibilidad%20y%20tarifas%20para%20una%20sesión%20de%20Tarot" target="_blank" class="btn-primary btn-whatsapp">
+          Consultar Disponibilidad y Tarifas por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACTO -->
+  <footer id="contacto" class="footer">
+    <div class="container">
+      <h3>RESERVAS & CONTRATACIÓN VIP</h3>
+      <p>Asunción, Paraguay · Cobertura Internacional</p>
+      <p>Email: <a href="mailto:info@erikalarika.com">info@erikalarika.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/34622898787">+34 622 89 87 87</a></p>
+      <p class="copyright">© 2026 Erika Larika / Condesa Lucienne. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
