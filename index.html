@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erika Larika | Condesa Lucienne</title>
+    <title>Erika Larika | Entre el Escenario y el Misterio</title>
 
-    <!-- Fuentes Cinematográficas de Alto Lujo (Carga Ultrarrápida) -->
+    <!-- Tipografías de Alto Lujo Cinematográfico -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Cinzel+Decorative:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            /* Paleta Otoño Cálido: Terciopelo Burdeos, Vino Tostado y Seda Champán */
-            --bg-terciopelo: radial-gradient(circle at 50% 30%, #58111A 0%, #2A060B 65%, #120204 100%);
-            --seda-champan: linear-gradient(135deg, #FFF0D6 0%, #E2C39B 50%, #B88B4A 100%);
-            --cobre-dorado: linear-gradient(135deg, #F3C68F 0%, #C57B36 50%, #7A3E0E 100%);
+            --bg-terciopelo: #120204;
             --vino-profundo: #2D050B;
+            --burdeos-lujo: #58111A;
+            --oro-seda: linear-gradient(135deg, #FFF0D6 0%, #E2C39B 40%, #B88B4A 100%);
+            --cobre-brillo: linear-gradient(135deg, #F3C68F 0%, #C57B36 50%, #7A3E0E 100%);
             --texto-crema: #FAF3E0;
             --dorado-texto: #E3B873;
         }
@@ -28,132 +28,143 @@
         }
 
         body {
-            background: var(--bg-terciopelo);
+            background-color: var(--bg-terciopelo);
+            background-image: 
+                radial-gradient(circle at 50% 30%, #58111A 0%, #2A060B 60%, #120204 100%);
             color: var(--texto-crema);
-            font-family: 'Bodoni Moda', serif;
+            font-family: 'Playfair Display', serif;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding: 3rem 1.5rem;
+            padding: 2.5rem 1.5rem;
             overflow-x: hidden;
+            position: relative;
         }
 
-        /* Encabezado Escénico Estilo Cartelera Retro */
+        /* Iluminación de Cortinaje Escénico en Fondo */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(243, 198, 143, 0.12) 0%, transparent 75%);
+            pointer-events: none;
+        }
+
+        /* Encabezado Escénico */
         header {
             text-align: center;
             max-width: 900px;
             margin-bottom: 2.5rem;
-            animation: fadeIn 1.8s ease-out;
+            position: relative;
+            z-index: 2;
         }
 
-        .sello-retro {
+        .sello-subtitulo {
             font-family: 'Montserrat', sans-serif;
             font-size: 0.75rem;
-            letter-spacing: 6px;
+            letter-spacing: 7px;
             text-transform: uppercase;
             color: var(--dorado-texto);
-            margin-bottom: 0.8rem;
-            opacity: 0.9;
+            margin-bottom: 0.6rem;
         }
 
         .titulo-principal {
             font-family: 'Cinzel Decorative', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            letter-spacing: 6px;
-            background: var(--seda-champan);
+            font-size: 3.6rem;
+            font-weight: 900;
+            letter-spacing: 8px;
+            background: var(--oro-seda);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.9);
             text-transform: uppercase;
-            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.8));
-            margin-bottom: 1rem;
+            line-height: 1.1;
         }
 
-        .manifiesto-intro {
-            font-family: 'Bodoni Moda', serif;
-            font-size: 1.25rem;
-            font-weight: 400;
+        .lema-frase {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
             color: #E2C39B;
-            line-height: 1.6;
-            max-width: 680px;
-            margin: 0 auto;
-            letter-spacing: 0.5px;
+            margin-top: 0.8rem;
+            letter-spacing: 1px;
         }
 
-        .separador-dorado {
-            width: 120px;
+        .separador-filigrana {
+            width: 140px;
             height: 2px;
-            background: var(--seda-champan);
-            margin: 1.8rem auto 0;
-            border-radius: 2px;
-            box-shadow: 0 0 10px rgba(226, 195, 155, 0.5);
+            background: var(--oro-seda);
+            margin: 1.5rem auto 0;
+            box-shadow: 0 0 12px rgba(226, 195, 155, 0.6);
         }
 
-        /* Portal de las Dos Puertas */
-        .portal-universos {
+        /* Escenario de los Dos Portales */
+        .portal-contenedor {
             display: flex;
-            gap: 3rem;
+            gap: 3.5rem;
             max-width: 1150px;
             width: 100%;
             justify-content: center;
             align-items: stretch;
             margin: 1rem 0 3rem;
+            position: relative;
+            z-index: 2;
         }
 
-        /* Tarjetas de Acceso de Terciopelo y Cobre */
-        .puerta-card {
+        /* Tarjeta Arco Escénico Labrado */
+        .portal-card {
             flex: 1;
-            background: linear-gradient(160deg, rgba(74, 13, 22, 0.75) 0%, rgba(20, 2, 5, 0.95) 100%);
-            border: 1px solid rgba(227, 184, 115, 0.35);
-            border-radius: 16px;
-            padding: 3rem 2.2rem;
+            background: linear-gradient(160deg, rgba(74, 13, 22, 0.85) 0%, rgba(18, 2, 4, 0.95) 100%);
+            border: 2px solid rgba(227, 184, 115, 0.4);
+            border-radius: 120px 120px 16px 16px; /* Forma de Arco Antiguo */
+            padding: 3.5rem 2.2rem 2.5rem;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(88, 17, 26, 0.5);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), inset 0 0 35px rgba(88, 17, 26, 0.6);
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
             text-decoration: none;
             color: inherit;
         }
 
-        .puerta-card:hover {
-            transform: translateY(-10px) scale(1.01);
+        .portal-card:hover {
+            transform: translateY(-12px);
             border-color: #F3C68F;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.85), 0 0 30px rgba(243, 198, 143, 0.25);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.95), 0 0 35px rgba(243, 198, 143, 0.3);
         }
 
-        /* Marcos Circulares de Espejo Retro */
-        .imagen-marco {
-            width: 200px;
-            height: 200px;
+        /* Retrato de Ovalo Labrado */
+        .retrato-marco {
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
-            padding: 5px;
-            background: var(--cobre-dorado);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            padding: 6px;
+            background: var(--cobre-brillo);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
             margin-bottom: 2rem;
             transition: transform 0.5s ease;
         }
 
-        .puerta-card:hover .imagen-marco {
-            transform: scale(1.05);
+        .portal-card:hover .retrato-marco {
+            transform: scale(1.06);
         }
 
-        .imagen-marco img {
+        .retrato-marco img {
             width: 100%;
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
         }
 
-        .categoria-tag {
+        .tag-subtitulo {
             font-family: 'Montserrat', sans-serif;
             font-size: 0.7rem;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             text-transform: uppercase;
             color: var(--dorado-texto);
             margin-bottom: 0.5rem;
@@ -161,158 +172,118 @@
 
         .titulo-card {
             font-family: 'Cinzel Decorative', serif;
-            font-size: 1.9rem;
+            font-size: 2rem;
             color: #FFF0D6;
             margin-bottom: 1rem;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         .descripcion-card {
-            font-family: 'Bodoni Moda', serif;
-            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
             color: #D2B48C;
             line-height: 1.6;
             margin-bottom: 2.2rem;
-            font-weight: 400;
+            font-style: italic;
         }
 
-        /* Botón Estilo Placa de Seda Champán */
-        .btn-seda {
+        /* Botón Estilo Placa de Bronce y Seda */
+        .btn-placa {
             display: inline-block;
-            padding: 1rem 2.2rem;
+            padding: 1.1rem 2.5rem;
             font-family: 'Montserrat', sans-serif;
             font-size: 0.8rem;
             font-weight: 600;
             letter-spacing: 4px;
             text-transform: uppercase;
             color: var(--vino-profundo);
-            background: var(--seda-champan);
+            background: var(--oro-seda);
             border-radius: 40px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
             transition: all 0.4s ease;
         }
 
-        .puerta-card:hover .btn-seda {
+        .portal-card:hover .btn-placa {
             background: #FFFFFF;
             color: #120204;
-            box-shadow: 0 8px 30px rgba(255, 240, 214, 0.6);
+            box-shadow: 0 10px 30px rgba(255, 240, 214, 0.6);
+            transform: scale(1.03);
         }
 
-        /* Secciones de Destino (Interactivas y ligeras) */
-        .seccion-destino {
-            max-width: 1000px;
-            width: 100%;
-            padding: 4rem 2rem;
-            margin-top: 3rem;
-            background: rgba(30, 4, 8, 0.9);
-            border: 1px solid rgba(226, 195, 155, 0.2);
-            border-radius: 16px;
-            display: none;
-        }
-
-        .seccion-destino:target {
-            display: block;
-            animation: fadeIn 1s ease-in-out;
-        }
-
+        /* Pie de página */
         footer {
             margin-top: 2rem;
             text-align: center;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: rgba(226, 195, 155, 0.5);
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            position: relative;
+            z-index: 2;
         }
 
         @media (max-width: 850px) {
-            .portal-universos {
+            .portal-contenedor {
                 flex-direction: column;
-                gap: 2.5rem;
+                gap: 3rem;
             }
 
             .titulo-principal {
                 font-size: 2.3rem;
             }
 
-            .manifiesto-intro {
-                font-size: 1.1rem;
+            .portal-card {
+                border-radius: 80px 80px 16px 16px;
+                padding: 2.8rem 1.5rem 2rem;
             }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <p class="sello-retro">Plataforma Artística & Intuitiva</p>
+        <p class="sello-subtitulo">Dos Mundos · Una Misma Alma</p>
         <h1 class="titulo-principal">Erika Larika</h1>
-        <p class="manifiesto-intro">
-            Un escenario donde el arte escénico de época, la voz y la fascinación del cabaret se entrelazan con la sabiduría intuitiva del Tarot y la visión evolutiva.
-        </p>
-        <div class="separador-dorado"></div>
+        <p class="lema-frase">"Entre el escenario y el misterio"</p>
+        <div class="separador-filigrana"></div>
     </header>
 
-    <!-- PORTAL PRINCIPAL (LAS DOS PUERTAS) -->
-    <main class="portal-universos">
-        
-        <!-- UNIVERSO 1: CONDESA LUCIENNE -->
-        <a href="#condesa" class="puerta-card">
+    <main class="portal-contenedor">
+
+        <!-- PUERTA 1: ARTISTA / CONDESA LUCIENNE -->
+        <a href="#artista" class="portal-card">
             <div>
-                <div class="imagen-marco">
-                    <img src="condesa.jpg" alt="Condesa Lucienne" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80'">
+                <div class="retrato-marco">
+                    <img src="artista.jpg" alt="Erika Larika Artista - Condesa Lucienne" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80'">
                 </div>
-                <p class="categoria-tag">Gala & Teatro</p>
-                <h2 class="titulo-card">Condesa Lucienne</h2>
+                <p class="tag-subtitulo">Escenario · Bolero · Glamour</p>
+                <h2 class="titulo-card">Artista</h2>
                 <p class="descripcion-card">
-                    Espectáculos de cabaret místico, boleros memorables y glamour retro. Una experiencia escénica envolvente para eventos VIP y escenarios de distinción.
+                    "La fascinación del escenario retro, el magnetismo de la voz y la elegancia del cabaret místico."
                 </p>
             </div>
-            <span class="btn-seda">Descubrir Espectáculos</span>
+            <span class="btn-placa">Entrar al Show</span>
         </a>
 
-        <!-- UNIVERSO 2: TAROT EVOLUTIVO -->
-        <a href="#tarot" class="puerta-card">
+        <!-- PUERTA 2: TAROTISTA / ERIKA LARIKA -->
+        <a href="#tarotista" class="portal-card">
             <div>
-                <div class="imagen-marco">
-                    <img src="tarot.jpg" alt="Tarot Evolutivo" onerror="this.src='https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=500&q=80'">
+                <div class="retrato-marco">
+                    <img src="tarotista.jpg" alt="Erika Larika Tarotista" onerror="this.src='https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=600&q=80'">
                 </div>
-                <p class="categoria-tag">Consultoría Intuitiva</p>
-                <h2 class="titulo-card">Tarot Evolutivo</h2>
+                <p class="tag-subtitulo">Tarot · Intuición · Rituales</p>
+                <h2 class="titulo-card">Tarotista</h2>
                 <p class="descripcion-card">
-                    Lecturas estratégicas, simbología arquetípica y mapa de consciencia. Un espacio de alta confidencialidad para revelar respuestas y trazar caminos.
+                    "Simbología sagrada y mapa de consciencia para revelar respuestas con claridad y transformación."
                 </p>
             </div>
-            <span class="btn-seda">Reservar Consultoría</span>
+            <span class="btn-placa">Reservar Consultoría</span>
         </a>
 
     </main>
 
-    <!-- DESPLIEGUE SECCIÓN 1: CONDESA LUCIENNE -->
-    <section id="condesa" class="seccion-destino">
-        <h2 style="font-family: 'Cinzel Decorative', serif; color: #FFF0D6; font-size: 2.2rem; margin-bottom: 1rem;">Universo Condesa Lucienne</h2>
-        <p style="font-size: 1.2rem; color: #D2B48C; line-height: 1.8;">
-            Bienvenido al espectáculo. Aquí desplegaremos tu dossier artístico, imágenes de vestuario vintage, repertorio de boleros y detalles para la contratación de galas privadas.
-        </p>
-        <br>
-        <a href="#" style="color: #E2C39B; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-decoration: none;">← Volver al Portal Principal</a>
-    </section>
-
-    <!-- DESPLIEGUE SECCIÓN 2: TAROT EVOLUTIVO -->
-    <section id="tarot" class="seccion-destino">
-        <h2 style="font-family: 'Cinzel Decorative', serif; color: #FFF0D6; font-size: 2.2rem; margin-bottom: 1rem;">Consultoría & Tarot Evolutivo</h2>
-        <p style="font-size: 1.2rem; color: #D2B48C; line-height: 1.8;">
-            El lenguaje sagrado de los símbolos. Aquí integraremos tu sistema de reservas online/presencial, la presentación de tus mazos y tu enfoque de acompañamiento transpersonal.
-        </p>
-        <br>
-        <a href="#" style="color: #E2C39B; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-decoration: none;">← Volver al Portal Principal</a>
-    </section>
-
     <footer>
-        <p>&copy; 2026 ERIKA LARIKA · TODOS LOS DERECHOS RESERVADOS</p>
+        <p>&copy; 2026 ERIKA LARIKA · ARTE · INTUICIÓN · TRANSFORMACIÓN</p>
     </footer>
 
 </body>
